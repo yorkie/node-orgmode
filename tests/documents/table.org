@@ -1,0 +1,9 @@
+#+FOO: BAR
+#+ZOO: LOOP
+
+* table
+
+#+NAME: tab1
+| foo | bar |
+|-----+-----|
+| y   | yo  |
