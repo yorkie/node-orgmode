@@ -1,6 +1,6 @@
 {
   "name": "orgmode",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "orgmode implementation in JavaScript",
   "main": "lib/orgmode.js",
   "scripts": {
