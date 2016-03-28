@@ -1,6 +1,8 @@
 #+FOO: BAR
 #+ZOO: LOOP
 
+* foobar
+
 * table
 
 #+NAME: tab1
