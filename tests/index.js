@@ -48,6 +48,7 @@ test('read a document with children', function(t) {
     path.join(__dirname, './documents/children.org'));
   const h1 = doc.findByTitle('h1')[0];
   t.equal(h1.children.length, 3);
-  t.equal(h1.children[0].children.length, 1);
+  t.equal(h1.children.first().children.length, 1);
+  t.equal
   t.end();
 });
