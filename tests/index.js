@@ -31,15 +31,23 @@ test('read a document with table', function(t) {
   const doc = new Orgmode(
     path.join(__dirname, './documents/table.org'));
   const outline = doc.findByTitle('table')[0];
-  t.equal(outline.heading.title, 'table');
-  t.equal(outline.section.children.length, 1);
-  t.equal(outline.section.children[0].type, 'table');
-  const table = outline.section.children[0];
+  t.equal(outline.title, 'table');
+  t.equal(outline.children.length, 0);
+  const table = outline.table(0);
   t.deepEqual(table.options, [
     {name: 'NAME', value: 'tab1'},
   ]);
   t.deepEqual(table.rows, [
     {foo: 'y', bar: 'yo'},
   ]);
+  t.end();
+});
+
+test('read a document with children', function(t) {
+  const doc = new Orgmode(
+    path.join(__dirname, './documents/children.org'));
+  const h1 = doc.findByTitle('h1')[0];
+  t.equal(h1.children.length, 3);
+  t.equal(h1.children[0].children.length, 1);
   t.end();
 });
