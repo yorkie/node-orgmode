@@ -28,7 +28,7 @@ document.findByLevel(1) // you will get both level 1 outlines in array
 
 ## API
 
-To see the complete API documentation, see [API Documentation](https://weflex.github.io/node-orgmode).
+To see the complete API documentation, see [API Documentation](http://blog.weflex.org/node-orgmode/index.html).
 
 ## License
 
