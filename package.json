@@ -8,7 +8,8 @@
   "description": "orgmode implementation in JavaScript",
   "main": "lib/orgmode.js",
   "scripts": {
-    "test": "node tests/*.js"
+    "test": "node tests/*.js",
+    "docs": "sh docs.sh"
   },
   "repository": {
     "type": "git",

@@ -30,6 +30,20 @@ document.findByLevel(1) // you will get both level 1 outlines in array
 
 To see the complete API documentation, see [API Documentation](http://blog.weflex.org/node-orgmode/index.html).
 
+## NPM Commands
+
+### Run Tests
+
+```sh
+$ npm test
+```
+
+### Release Documentation
+
+```sh
+$ npm docs
+```
+
 ## License
 
 MIT
