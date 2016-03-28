@@ -9,7 +9,8 @@
   "main": "lib/orgmode.js",
   "scripts": {
     "test": "node tests/*.js",
-    "docs": "sh docs.sh"
+    "docs": "sh docs.sh",
+    "prepublish": "npm run docs"
   },
   "repository": {
     "type": "git",
