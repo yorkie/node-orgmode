@@ -33,13 +33,14 @@ test('read a document with table', function(t) {
   const outline = doc.findByTitle('table')[0];
   t.equal(outline.title, 'table');
   t.equal(outline.children.length, 0);
-  const table = outline.table(0);
+  const table = outline.tables[0];
   t.deepEqual(table.options, [
     {name: 'NAME', value: 'tab1'},
   ]);
   t.deepEqual(table.rows, [
     {foo: 'y', bar: 'yo'},
   ]);
+  t.equal(doc.tables.length, 1);
   t.end();
 });
 
@@ -49,6 +50,5 @@ test('read a document with children', function(t) {
   const h1 = doc.findByTitle('h1')[0];
   t.equal(h1.children.length, 3);
   t.equal(h1.children.first().children.length, 1);
-  t.equal
   t.end();
 });
