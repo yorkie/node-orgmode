@@ -57,10 +57,14 @@ test('read a document with children', function(t) {
   t.end();
 });
 
-//test('read a document with tags', function(t) {
-//  const doc = new Orgmode(
-//    path.join(__dirname, './documents/tags.org'));
-//  const h1 = doc.findByTitle('h1')[0];
-//  t.equal(h1.tags.length, 2);
-//  t.end();
-//});
+test('read a document with tags', function(t) {
+  const doc = new Orgmode(
+    path.join(__dirname, './documents/tags.org'));
+  const h1 = doc.findByLevel(1)[0];
+  const h2 = doc.findByTitle('h2')[0];
+  const h11 = doc.findByTitle('h11')[0];
+  t.equal(h1.tags.length, 2);
+  t.equal(h2.tags.length, 0);
+  t.equal(h11.tags[0], "_3%");
+  t.end();
+});
