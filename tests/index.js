@@ -31,10 +31,6 @@ test('read a document with table', function(t) {
   const doc = new Orgmode(
     path.join(__dirname, './documents/table.org'));
   const outline = doc.findByTitle('table')[0];
-  const out = doc.findByLevel(1)[0];
-  console.log(out);
-  console.log("=====");
-
   t.equal(outline.title, 'table');
   t.equal(outline.children.length, 0);
   const table = outline.tables[0];
