@@ -78,7 +78,7 @@ test('read a document with tags', function(t) {
   t.equal(tag2s.length, 2);
   t.equal(tag2s[0].title, "h1");
   t.equal(tag2s[1].title, "h2");
-  const hash2= doc.findByTags('#2');
+  const hash2 = doc.findByTags('#2');
   t.equal(hash2.length, 2);
   t.equal(hash2[0].title, "h21");
   t.equal(hash2[1].title, "h22");
