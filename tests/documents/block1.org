@@ -1,0 +1,13 @@
+#+BEGIN_TEST data
+first line of content
+second line of content
+last line of content
+#+END_TEST
+
+#+BEGIN_CENTER data
+first line of center
+last line of center
+#+END_CENTER
+
+
+

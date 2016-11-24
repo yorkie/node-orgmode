@@ -31,6 +31,8 @@ test('read a document with table', function(t) {
   const doc = new Orgmode(
     path.join(__dirname, './documents/table.org'));
   const outline = doc.findByTitle('table')[0];
+  //console.log(outline)
+  //console.log(outline.tables[0])
   t.equal(outline.title, 'table');
   t.equal(outline.children.length, 0);
   const table = outline.tables[0];
@@ -82,5 +84,23 @@ test('read a document with tags', function(t) {
   t.equal(hash2.length, 2);
   t.equal(hash2[0].title, "h21");
   t.equal(hash2[1].title, "h22");
+  t.end();
+});
+
+test('read a document with block1', function(t) {
+  const doc = new Orgmode(
+    path.join(__dirname, './documents/block1.org'));
+  const block1 = doc.findBlockByName("TEST")[0];
+  t.equal(block1.name , 'TEST');
+  t.equal(block1.type , 'special');
+  t.equal(block1.parameter , 'data');
+  t.equal(block1.content.length, 3);
+  t.equal(block1.content[0], 'first line of content');
+  const block2 = doc.findBlockByName("CENTER")[0];
+  t.equal(block2.name , 'CENTER');
+  t.equal(block2.type , 'center');
+  t.equal(block2.parameter , 'data');
+  t.equal(block2.content.length, 2);
+  t.equal(block2.content[0], 'first line of center');
   t.end();
 });
